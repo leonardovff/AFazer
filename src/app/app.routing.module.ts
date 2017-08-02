@@ -6,11 +6,11 @@ import { TasksFormComponent } from './components/tasks-form/tasks-form.component
 
 
 const appRoutes: Routes = [
-  { path: 'add', component: TasksFormComponent},
-  { path: 'edit/:id', component: TasksFormComponent},
+  { path: ':identity/add', component: TasksFormComponent},
+  { path: ':identity/edit/:id', component: TasksFormComponent},
   // { path: 'login', component: LoginComponent, canActivate: [LoginGuard]},
   // { path: 'my-account', component: MyAccountComponent,canActivate: [AuthGuard]},
-  // { path: '**', redirectTo: 'not-found'}
+  { path: '*'}
 
 ];
 
