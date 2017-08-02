@@ -1,8 +1,21 @@
+.isChecked
 md-card{
   position: relative;
 }
 md-checkbox{
   margin-right: 5px;
+}
+h2{
+  display: inline;
+  font-weight: lighter;
+  font-size: 1em;
+}
+
+md-card.isChecked{
+  background: #f5f5f5;
+}
+md-card.isChecked h2{
+  text-decoration: line-through;
 }
 .task-tool{
   position: absolute;
