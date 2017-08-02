@@ -1,0 +1,9 @@
+form{
+  width: 100%;
+}
+md-input-container{
+  width: 100%
+}
+span{
+  flex: 1 1 auto;
+}

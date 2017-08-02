@@ -1,0 +1,15 @@
+<md-dialog-content>
+  <form [formGroup]="form">
+    <md-input-container>
+      <input mdInput formControlName="title" placeholder="Titulo">
+    </md-input-container>
+    <md-input-container>
+      <textarea mdInput formControlName="description" placeholder="Descrição"></textarea>
+    </md-input-container>
+  </form>
+</md-dialog-content>
+<md-dialog-actions>
+  <span></span>
+  <button md-button [md-dialog-close]="false">Cancelar</button>
+  <button md-button [disabled]="!form.valid" [md-dialog-close]="form.value">Ok</button>
+</md-dialog-actions>

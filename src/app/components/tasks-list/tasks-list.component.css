@@ -16,7 +16,7 @@ md-checkbox{
   background: -moz-linear-gradient(bottom right, rgba(0,0,0,0), rgba(0,0,0,0.01)); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom right, rgba(0,0,0,0), rgba(0,0,0,0.01));
 }
-.task-tool>a{
+.task-tool>a, .task-tool>button{
   position: relative;
   top: 50%;
   transform: translateY(-50%);
