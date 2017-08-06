@@ -10,7 +10,6 @@ const appRoutes: Routes = [
   { path: 'edit/:id', component: TasksFormComponent},
   // { path: 'login', component: LoginComponent, canActivate: [LoginGuard]},
   // { path: 'my-account', component: MyAccountComponent,canActivate: [AuthGuard]},
-  // { path: '**', redirectTo: 'not-found'}
 
 ];
 
