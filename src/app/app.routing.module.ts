@@ -3,14 +3,16 @@ import { ModuleWithProviders } from '@angular/core'
 import { Routes, RouterModule } from '@angular/router';
 
 import { TasksFormComponent } from './components/tasks-form/tasks-form.component';
-
+import { TasksListComponent } from './components/tasks-list/tasks-list.component'
 
 const appRoutes: Routes = [
-  { path: ':identity/add', component: TasksFormComponent},
-  { path: ':identity/edit/:id', component: TasksFormComponent},
-  // { path: 'login', component: LoginComponent, canActivate: [LoginGuard]},
+  { path: ':identity', component: TasksListComponent, children: [
+      { path: 'add', component:  TasksFormComponent},
+      { path: 'edit:id', component: TasksFormComponent }
+  ]},
+  { path: '', component: TasksListComponent}
   // { path: 'my-account', component: MyAccountComponent,canActivate: [AuthGuard]},
-  { path: '*'}
+  // { path: '*'}
 
 ];
 
