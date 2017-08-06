@@ -1,3 +1,24 @@
+:host{
+  margin: 1.5em auto 3.5em;
+  width: 90%;
+  display: block;
+}
+@media (min-width: 45em){
+  :host{
+    width: 70%;
+  }
+}
+@media (min-width: 62em){
+  :host{
+    width: 50%;
+  }
+}
+@media (min-width: 70em){
+  :host{
+    width: 40%;
+  }
+}
+
 .isChecked
 md-card{
   position: relative;
@@ -34,4 +55,11 @@ md-card.isChecked h2{
   top: 50%;
   transform: translateY(-50%);
   color: #9899a0;
+}
+
+
+.float-tool{
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
 }

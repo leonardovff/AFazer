@@ -13,14 +13,21 @@ import { FormComponent } from './form/form.component'
 })
 export class TasksFormComponent implements OnInit {
   id: any = null;
+  identity: string = '';
   constructor(
     private dialog: MdDialog,
     private db: AngularFireDatabase,
     private router: Router,
     private route: ActivatedRoute
-  ) { }
+  ) {
+
+    this.router.events.subscribe(params => {
+      this.identity = params['url'].substring(1).split('/')[0];
+    });
+  }
 
   ngOnInit() {
+
     var id = this.route.params.subscribe(params => {
       this.id = params['id'] ? params['id'] : null;
       if(this.id){
@@ -45,14 +52,14 @@ export class TasksFormComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       if(result){
         const tasks = this.db.list('/tasks');
+        result.list = "UeWBKUeWBK:" + this.identity;
         if(this.id) {
           tasks.update(this.id, result);
         } else {
-          console.log(result);
           tasks.push(result);
         }
       }
-      this.router.navigate(['']);
+      this.router.navigate([this.identity]);
     });
     return dialogRef;
   }

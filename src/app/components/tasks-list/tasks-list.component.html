@@ -3,6 +3,12 @@
   <h2>{{task.title}}</h2>
   <div *ngIf="!task.checked" class="task-tool">
     <button md-icon-button md-button (click)="remove(task.$key)"><md-icon>delete</md-icon></button>
-    <a md-icon-button [routerLink]="['/edit',  task.$key ]" md-button><md-icon>edit</md-icon></a>
+    <a md-icon-button [routerLink]="[ task.$key, 'edit']" md-button><md-icon>edit</md-icon></a>
   </div>
 </md-card>
+
+<router-outlet></router-outlet>
+
+<div class="float-tool">
+  <a md-fab routerLink="add"><md-icon>add</md-icon></a>
+</div>
