@@ -2,8 +2,3 @@ h1{
   flex: 1 1 auto;
   text-align: center;
 }
-.float-tool{
-  position: fixed;
-  bottom: 1em;
-  right: 1em;
-}

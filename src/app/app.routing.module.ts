@@ -8,7 +8,7 @@ import { TasksListComponent } from './components/tasks-list/tasks-list.component
 const appRoutes: Routes = [
   { path: ':identity', component: TasksListComponent, children: [
       { path: 'add', component:  TasksFormComponent},
-      { path: 'edit:id', component: TasksFormComponent }
+      { path: ':id/edit', component: TasksFormComponent }
   ]},
   { path: '', component: TasksListComponent}
   // { path: 'my-account', component: MyAccountComponent,canActivate: [AuthGuard]},

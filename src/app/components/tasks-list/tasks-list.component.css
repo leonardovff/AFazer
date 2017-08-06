@@ -56,3 +56,10 @@ md-card.isChecked h2{
   transform: translateY(-50%);
   color: #9899a0;
 }
+
+
+.float-tool{
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+}
