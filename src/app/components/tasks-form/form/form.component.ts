@@ -17,8 +17,8 @@ export class FormComponent implements OnInit {
     this.form = fb.group({
       checked: false,
       title: ['', [Validators.required]],
-      description: ['', [Validators.required]],
-      list: null
+      list: null,
+      description: ''
     });
     if(data){
       data.subscribe(snapshot => {

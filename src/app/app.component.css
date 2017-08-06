@@ -1,4 +1,7 @@
 h1{
   flex: 1 1 auto;
-  text-align: center;
+  text-align: left;
+}
+img{
+  margin-right: 10px;
 }

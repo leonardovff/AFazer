@@ -11,9 +11,6 @@ const appRoutes: Routes = [
       { path: ':id/edit', component: TasksFormComponent }
   ]},
   { path: '', component: TasksListComponent}
-  // { path: 'my-account', component: MyAccountComponent,canActivate: [AuthGuard]},
-  // { path: '*'}
-
 ];
 
 @NgModule({
